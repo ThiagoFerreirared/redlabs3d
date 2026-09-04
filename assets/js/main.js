@@ -28,13 +28,42 @@ navigationLinks.forEach((link) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 760) setMenuState(false);
+  if (window.innerWidth > 820) setMenuState(false);
 });
 
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
 if (year) year.textContent = String(new Date().getFullYear());
+
+const sizeInputs = document.querySelectorAll('input[name="size"]');
+const currentPrice = document.querySelector("[data-current-price]");
+const currentSize = document.querySelector("[data-current-size]");
+const orderLink = document.querySelector("[data-order-link]");
+const currency = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
+
+const updateOrder = (input) => {
+  if (!input || !currentPrice || !currentSize || !orderLink) return;
+
+  const size = input.value;
+  const price = Number(input.dataset.price);
+  const formattedPrice = currency.format(price);
+  const subject = `Encomenda Kratos - ${size} cm`;
+  const body = `Olá, gostaria de encomendar o Kratos de ${size} cm por ${formattedPrice}.`;
+
+  currentPrice.textContent = formattedPrice;
+  currentSize.textContent = `Peça de ${size} cm`;
+  orderLink.href = `mailto:contato@redlabs3d.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
+sizeInputs.forEach((input) => {
+  input.addEventListener("change", () => updateOrder(input));
+});
+
+updateOrder(document.querySelector('input[name="size"]:checked'));
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealItems = document.querySelectorAll(".reveal");
@@ -55,4 +84,5 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
 
   revealItems.forEach((item) => observer.observe(item));
 }
+
 

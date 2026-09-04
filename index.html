@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A RedLabs cria esculturas colecionáveis em impressão 3D de alta resolução, com modelagem, acabamento e pintura manual."
+      content="Kratos — The Ghost of Sparta. Peça colecionável produzida pela RedLabs em impressão 3D, disponível em 15, 20 e 30 cm."
     />
-    <meta name="theme-color" content="#09090b" />
-    <title>RedLabs — Esculturas colecionáveis em 3D</title>
+    <meta name="theme-color" content="#08080a" />
+    <title>Kratos — Catálogo RedLabs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,7 +24,7 @@
 
     <header class="site-header" data-header>
       <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="RedLabs, página inicial">
+        <a class="brand" href="#catalogo" aria-label="RedLabs, voltar ao catálogo">
           <svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true">
             <path d="M21 2.7 36.8 12v18L21 39.3 5.2 30V12L21 2.7Z" />
             <path d="m13.3 16.3 7.7-4.5 7.7 4.5v9.4L21 30.2l-7.7-4.5v-9.4Z" />
@@ -46,104 +46,128 @@
         </button>
 
         <nav id="main-navigation" class="main-navigation" aria-label="Navegação principal" data-navigation>
-          <a href="#projetos">Projetos</a>
-          <a href="#processo">Processo</a>
-          <a href="#qualidade">Qualidade</a>
-          <a class="button button-small" href="#contato">Solicitar orçamento</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#detalhes">Detalhes</a>
+          <a href="#processo">Como funciona</a>
+          <a class="button button-small" href="#comprar">Encomendar</a>
         </nav>
       </div>
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <img
-            src="assets/images/collection-hero.webp"
-            alt=""
-            width="1536"
-            height="864"
-            fetchpriority="high"
-          />
-        </div>
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="container hero-layout">
-          <div class="hero-content">
-            <p class="eyebrow"><span></span> Ateliê de impressão 3D</p>
-            <h1 id="hero-title">Esculturas que merecem <em>presença.</em></h1>
-            <p class="hero-copy">
-              Do arquivo digital à peça final: modelagem, impressão em alta resolução e pintura manual para colecionadores exigentes.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="#projetos">Conhecer o trabalho</a>
-              <a class="text-link" href="#processo">
-                Como produzimos
-                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 9 0m-4-4 4 4-4 4" /></svg>
-              </a>
+      <section id="catalogo" class="product-hero" aria-labelledby="product-title">
+        <div class="product-grid" aria-hidden="true"></div>
+        <div class="product-glow" aria-hidden="true"></div>
+
+        <div class="container product-layout">
+          <div class="product-content">
+            <p class="collection-label"><span>Coleção</span> Anime / Games</p>
+            <h1 id="product-title">
+              <span>Kratos</span>
+              <small>The Ghost of Sparta</small>
+            </h1>
+
+            <div class="mobile-product-preview">
+              <img src="assets/images/kratos-product.webp" alt="" width="1600" height="1600" />
             </div>
+
+            <p class="product-description">
+              O lendário guerreiro espartano em uma peça de presença marcante, produzida em impressão 3D e finalizada com pintura manual. Cada detalhe foi pensado para levar a força de Kratos à sua coleção.
+            </p>
+
+            <dl class="spec-list">
+              <div>
+                <dt>Material</dt>
+                <dd>PLA</dd>
+              </div>
+              <div>
+                <dt>Acabamento</dt>
+                <dd>Pintura manual</dd>
+              </div>
+              <div>
+                <dt>Alturas</dt>
+                <dd>15, 20 e 30 cm</dd>
+              </div>
+            </dl>
+
+            <form class="product-order" data-product-form>
+              <fieldset>
+                <legend>Escolha o tamanho</legend>
+                <div class="size-options">
+                  <label>
+                    <input type="radio" name="size" value="15" data-price="99" />
+                    <span class="size-card"><strong>15 cm</strong><small>R$ 99,00</small></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="size" value="20" data-price="149" />
+                    <span class="size-card"><strong>20 cm</strong><small>R$ 149,00</small></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="size" value="30" data-price="200" checked />
+                    <span class="size-card"><strong>30 cm</strong><small>R$ 200,00</small></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="order-summary">
+                <div class="current-price" aria-live="polite">
+                  <span>A partir de</span>
+                  <strong data-current-price>R$ 200,00</strong>
+                  <small data-current-size>Peça de 30 cm</small>
+                </div>
+                <a
+                  class="button order-button"
+                  data-order-link
+                  href="mailto:contato@redlabs3d.com?subject=Encomenda%20Kratos%20-%2030%20cm&amp;body=Olá%2C%20gostaria%20de%20encomendar%20o%20Kratos%20de%2030%20cm%20por%20R%24%20200%2C00."
+                >
+                  Solicitar esta peça
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 9 0m-4-4 4 4-4 4" /></svg>
+                </a>
+              </div>
+              <p class="order-note"><span></span> Produção sob encomenda</p>
+            </form>
           </div>
 
-          <ul class="hero-specs" aria-label="Especialidades">
-            <li><strong>4K / 8K</strong><span>Impressão em resina</span></li>
-            <li><strong>Sob medida</strong><span>Escala e acabamento</span></li>
-            <li><strong>Feito à mão</strong><span>Pintura e montagem</span></li>
-          </ul>
+          <div class="product-visual" aria-label="Imagem oficial da peça Kratos">
+            <span class="product-code">RL / 001</span>
+            <span class="visual-word" aria-hidden="true">GHOST</span>
+            <div class="measure measure-top" aria-hidden="true"><span>30 cm</span></div>
+            <div class="measure measure-bottom" aria-hidden="true"><span>15 cm</span></div>
+            <div class="red-orbit" aria-hidden="true"></div>
+            <img
+              src="assets/images/kratos-product.webp"
+              alt="Peça colecionável Kratos impressa em 3D e pintada à mão"
+              width="1600"
+              height="1600"
+              fetchpriority="high"
+            />
+            <p class="visual-caption"><span>Foto oficial</span> RedLabs Studio 3D</p>
+          </div>
         </div>
-        <a class="scroll-cue" href="#projetos" aria-label="Ir para projetos">
-          <span>Explorar</span>
-          <svg viewBox="0 0 20 28" aria-hidden="true"><path d="M10 1v25m-6-6 6 6 6-6" /></svg>
-        </a>
       </section>
 
-      <section id="projetos" class="section projects" aria-labelledby="projects-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <div>
-              <p class="eyebrow"><span></span> Portfólio selecionado</p>
-              <h2 id="projects-title">Detalhe que se percebe.<br />Qualidade que permanece.</h2>
-            </div>
-            <p>
-              Cada projeto combina precisão técnica e acabamento artesanal para transformar uma ideia em uma peça de coleção.
-            </p>
+      <section id="detalhes" class="section product-details" aria-labelledby="details-title">
+        <div class="container details-layout">
+          <div class="details-heading reveal">
+            <p class="eyebrow"><span></span> Sobre a peça</p>
+            <h2 id="details-title">Feita para ocupar o centro da coleção.</h2>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card project-card-wide reveal">
-              <div class="project-image image-center">
-                <img src="assets/images/collection-hero.webp" alt="Escultura autoral biomecânica com acabamento em resina" width="1536" height="864" loading="lazy" />
-              </div>
-              <div class="project-info">
-                <div>
-                  <p>Peça autoral · Resina</p>
-                  <h3>Guardião biomecânico</h3>
-                </div>
-                <span class="project-number">01</span>
-              </div>
+          <div class="detail-cards">
+            <article class="detail-card reveal">
+              <span>01</span>
+              <h3>Três escalas</h3>
+              <p>Escolha entre 15, 20 ou 30 cm de altura para encontrar a presença ideal para sua estante.</p>
             </article>
-
-            <article class="project-card reveal">
-              <div class="project-image image-left">
-                <img src="assets/images/collection-hero.webp" alt="Busto autoral de guerreiro futurista impresso em 3D" width="1536" height="864" loading="lazy" />
-              </div>
-              <div class="project-info">
-                <div>
-                  <p>Busto · Pintura manual</p>
-                  <h3>Ronin do futuro</h3>
-                </div>
-                <span class="project-number">02</span>
-              </div>
+            <article class="detail-card reveal">
+              <span>02</span>
+              <h3>Impressão precisa</h3>
+              <p>Produção em PLA com atenção aos volumes, texturas da armadura e expressão do personagem.</p>
             </article>
-
-            <article class="project-card reveal">
-              <div class="project-image image-right">
-                <img src="assets/images/collection-hero.webp" alt="Busto autoral de explorador espacial com pintura detalhada" width="1536" height="864" loading="lazy" />
-              </div>
-              <div class="project-info">
-                <div>
-                  <p>Personagem original · Resina</p>
-                  <h3>Explorador orbital</h3>
-                </div>
-                <span class="project-number">03</span>
-              </div>
+            <article class="detail-card reveal">
+              <span>03</span>
+              <h3>Finalização manual</h3>
+              <p>Pintura e acabamento feitos peça a peça para realçar os contrastes, marcas e acessórios.</p>
             </article>
           </div>
         </div>
@@ -152,72 +176,45 @@
       <section id="processo" class="section process" aria-labelledby="process-title">
         <div class="container process-layout">
           <div class="process-intro reveal">
-            <p class="eyebrow"><span></span> Da ideia à estante</p>
-            <h2 id="process-title">Um processo preciso, sem atalhos.</h2>
-            <p>Você acompanha as decisões importantes antes de cada etapa avançar.</p>
+            <p class="eyebrow"><span></span> Da oficina até você</p>
+            <h2 id="process-title">Sua peça em quatro etapas.</h2>
+            <p>A produção começa após a confirmação do tamanho e do orçamento.</p>
           </div>
 
           <ol class="process-list">
             <li class="reveal">
               <span>01</span>
-              <div><h3>Briefing</h3><p>Definimos referência, escala, pose, acabamento e prazo do projeto.</p></div>
+              <div><h3>Escolha</h3><p>Você seleciona a altura da peça e confirma os detalhes da encomenda.</p></div>
             </li>
             <li class="reveal">
               <span>02</span>
-              <div><h3>Preparação</h3><p>O modelo é revisado, dimensionado e preparado para impressão com máxima fidelidade.</p></div>
+              <div><h3>Impressão</h3><p>O modelo é preparado e produzido na escala escolhida.</p></div>
             </li>
             <li class="reveal">
               <span>03</span>
-              <div><h3>Produção</h3><p>Impressão em alta resolução, cura, montagem e refinamento de superfície.</p></div>
+              <div><h3>Acabamento</h3><p>A peça recebe montagem, refinamento e pintura manual.</p></div>
             </li>
             <li class="reveal">
               <span>04</span>
-              <div><h3>Finalização</h3><p>Pintura manual, controle de qualidade e embalagem segura para envio.</p></div>
+              <div><h3>Envio</h3><p>Depois da revisão final, a peça é protegida e preparada para transporte.</p></div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section id="qualidade" class="section quality" aria-labelledby="quality-title">
-        <div class="quality-glow" aria-hidden="true"></div>
-        <div class="container quality-layout">
-          <div class="quality-copy reveal">
-            <p class="eyebrow"><span></span> Padrão RedLabs</p>
-            <h2 id="quality-title">Precisão digital.<br />Acabamento humano.</h2>
-          </div>
-          <div class="quality-details">
-            <article class="reveal">
-              <span class="detail-line"></span>
-              <h3>Alta resolução</h3>
-              <p>Equipamentos 4K e 8K capturam volumes, texturas e microdetalhes com definição.</p>
-            </article>
-            <article class="reveal">
-              <span class="detail-line"></span>
-              <h3>Pintura profissional</h3>
-              <p>Aerografia, luz e sombra e materiais selecionados para um resultado expressivo.</p>
-            </article>
-            <article class="reveal">
-              <span class="detail-line"></span>
-              <h3>Envio protegido</h3>
-              <p>Montagem revisada e embalagem dimensionada para a peça chegar em segurança.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="section contact" aria-labelledby="contact-title">
+      <section id="comprar" class="section contact" aria-labelledby="contact-title">
         <div class="container contact-card reveal">
-          <p class="eyebrow"><span></span> Seu próximo projeto</p>
-          <h2 id="contact-title">Vamos transformar sua ideia em uma peça de coleção?</h2>
-          <p>Conte o que você imagina, a escala desejada e o tipo de acabamento. A RedLabs prepara uma proposta personalizada.</p>
-          <a class="button button-light" href="mailto:contato@redlabs3d.com?subject=Solicitação%20de%20orçamento%20RedLabs">Solicitar orçamento</a>
+          <p class="eyebrow"><span></span> Encomendas RedLabs</p>
+          <h2 id="contact-title">Escolha sua escala.<br />Nós cuidamos do resto.</h2>
+          <p>Selecione o tamanho no catálogo e envie sua solicitação. A confirmação de prazo e entrega é feita antes da produção.</p>
+          <a class="button button-light" href="#catalogo">Voltar às opções</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <a class="brand" href="#inicio" aria-label="RedLabs, voltar ao início">
+        <a class="brand" href="#catalogo" aria-label="RedLabs, voltar ao catálogo">
           <svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true">
             <path d="M21 2.7 36.8 12v18L21 39.3 5.2 30V12L21 2.7Z" />
             <path d="m13.3 16.3 7.7-4.5 7.7 4.5v9.4L21 30.2l-7.7-4.5v-9.4Z" />
@@ -225,11 +222,11 @@
           </svg>
           <span>RED<span>LABS</span></span>
         </a>
-        <p>Esculturas colecionáveis em impressão 3D, produzidas com precisão e cuidado artesanal.</p>
+        <p>Peças colecionáveis em impressão 3D, produzidas sob encomenda com cuidado em cada detalhe.</p>
         <div class="footer-links">
-          <a href="#projetos">Projetos</a>
-          <a href="#processo">Processo</a>
-          <a href="#contato">Contato</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#detalhes">Detalhes</a>
+          <a href="#processo">Como funciona</a>
         </div>
       </div>
       <div class="container footer-bottom">
