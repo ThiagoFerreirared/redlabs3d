@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Kratos — The Ghost of Sparta. Peça colecionável produzida pela RedLabs em impressão 3D, disponível em 15, 20 e 30 cm."
+      content="Catálogo RedLabs de action figures, personagens de games, anime e Pokémon produzidos em impressão 3D."
     />
     <meta name="theme-color" content="#08080a" />
-    <title>Kratos — Catálogo RedLabs</title>
+    <title>Catálogo de colecionáveis | RedLabs Studio 3D</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,7 +55,72 @@
     </header>
 
     <main id="conteudo">
-      <section id="catalogo" class="product-hero" aria-labelledby="product-title">
+      <section id="catalogo" class="catalog-browser" aria-labelledby="catalog-title">
+        <div class="catalog-grid-pattern" aria-hidden="true"></div>
+        <div class="container">
+          <div class="catalog-heading">
+            <div>
+              <p class="eyebrow"><span></span> Catálogo RedLabs</p>
+              <h1 id="catalog-title">Escolha sua<br /><em>próxima peça.</em></h1>
+            </div>
+            <p class="catalog-intro">
+              Explore por coleção e encontre o personagem que combina com a sua estante.
+              <strong data-visible-count>1 modelo disponível</strong>
+            </p>
+          </div>
+
+          <div class="category-filters" role="toolbar" aria-label="Filtrar catálogo por categoria">
+            <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter-chip" type="button" data-filter="action-figures" aria-pressed="false">Action Figures</button>
+            <button class="filter-chip" type="button" data-filter="pokemon" aria-pressed="false">Pokémon</button>
+            <button class="filter-chip" type="button" data-filter="anime" aria-pressed="false">Anime</button>
+            <button class="filter-chip" type="button" data-filter="games" aria-pressed="false">Games</button>
+          </div>
+
+          <div class="catalog-products" data-catalog-grid>
+            <article class="catalog-product-card" data-product-card data-categories="action-figures games">
+              <a href="#kratos" aria-label="Ver detalhes de Kratos, The Ghost of Sparta">
+                <div class="catalog-product-image">
+                  <span class="catalog-product-number">RL / 001</span>
+                  <img
+                    src="assets/images/kratos-product.webp"
+                    alt="Peça Kratos impressa em 3D colorido em PLA"
+                    width="1600"
+                    height="1600"
+                    fetchpriority="high"
+                  />
+                  <span class="catalog-view">Ver detalhes <span aria-hidden="true">↗</span></span>
+                </div>
+                <div class="catalog-product-info">
+                  <div>
+                    <p>Action Figure · Games</p>
+                    <h2>Kratos</h2>
+                    <span>The Ghost of Sparta</span>
+                  </div>
+                  <div class="catalog-product-price">
+                    <span>A partir de</span>
+                    <strong>R$ 99,00</strong>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="catalog-empty" data-catalog-empty hidden role="status" aria-live="polite">
+            <span aria-hidden="true">+</span>
+            <h2>Nenhum modelo nesta coleção ainda.</h2>
+            <p>Novas peças estão sendo preparadas. Escolha outra categoria para continuar explorando.</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="kratos"
+        class="product-hero"
+        aria-labelledby="product-title"
+        data-product-detail
+        data-categories="action-figures games"
+      >
         <div class="product-grid" aria-hidden="true"></div>
         <div class="product-glow" aria-hidden="true"></div>
 
