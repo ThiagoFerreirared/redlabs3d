@@ -36,6 +36,44 @@ updateHeader();
 
 if (year) year.textContent = String(new Date().getFullYear());
 
+const filterButtons = document.querySelectorAll("[data-filter]");
+const productCards = document.querySelectorAll("[data-product-card]");
+const productDetails = document.querySelectorAll("[data-product-detail]");
+const catalogEmpty = document.querySelector("[data-catalog-empty]");
+const visibleCount = document.querySelector("[data-visible-count]");
+
+const belongsToCategory = (item, filter) => {
+  if (filter === "all") return true;
+  return (item.dataset.categories ?? "").split(" ").includes(filter);
+};
+
+const filterCatalog = (filter) => {
+  let count = 0;
+
+  filterButtons.forEach((button) => {
+    const isActive = button.dataset.filter === filter;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  productCards.forEach((card) => {
+    const isVisible = belongsToCategory(card, filter);
+    card.hidden = !isVisible;
+    if (isVisible) count += 1;
+  });
+
+  productDetails.forEach((detail) => {
+    detail.hidden = !belongsToCategory(detail, filter);
+  });
+
+  if (catalogEmpty) catalogEmpty.hidden = count !== 0;
+  if (visibleCount) visibleCount.textContent = `${count} ${count === 1 ? "modelo disponível" : "modelos disponíveis"}`;
+};
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => filterCatalog(button.dataset.filter ?? "all"));
+});
+
 const sizeInputs = document.querySelectorAll('input[name="size"]');
 const currentPrice = document.querySelector("[data-current-price]");
 const currentSize = document.querySelector("[data-current-size]");
