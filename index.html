@@ -59,91 +59,86 @@
         <div class="product-grid" aria-hidden="true"></div>
         <div class="product-glow" aria-hidden="true"></div>
 
-        <div class="container product-layout">
-          <div class="product-content">
-            <p class="collection-label"><span>Coleção</span> Anime / Games</p>
-            <h1 id="product-title">
-              <span>Kratos</span>
-              <small>The Ghost of Sparta</small>
-            </h1>
-
-            <div class="mobile-product-preview">
-              <img src="assets/images/kratos-product.webp" alt="" width="1600" height="1600" />
+        <article class="container catalog-card">
+          <header class="product-masthead">
+            <div>
+              <p class="collection-label"><span>Coleção</span> Anime / Games</p>
+              <h1 id="product-title"><span>Kratos:</span> The Ghost of Sparta</h1>
             </div>
+            <p class="product-code">RL / 001</p>
+          </header>
 
-            <p class="product-description">
-              O lendário guerreiro espartano em uma peça de presença marcante, produzida em impressão 3D e finalizada com pintura manual. Cada detalhe foi pensado para levar a força de Kratos à sua coleção.
-            </p>
+          <div class="product-showcase">
+            <figure class="product-figure">
+              <span class="visual-word" aria-hidden="true">GHOST</span>
+              <span class="red-orbit" aria-hidden="true"></span>
+              <img
+                src="assets/images/kratos-product.webp"
+                alt="Peça Kratos impressa em 3D colorido em PLA"
+                width="1600"
+                height="1600"
+                fetchpriority="high"
+              />
+              <figcaption><span>Foto oficial</span> RedLabs Studio 3D</figcaption>
+            </figure>
 
-            <dl class="spec-list">
+            <dl class="product-facts">
+              <div>
+                <dt>Altura máxima</dt>
+                <dd>30 cm</dd>
+              </div>
               <div>
                 <dt>Material</dt>
                 <dd>PLA</dd>
               </div>
               <div>
-                <dt>Acabamento</dt>
-                <dd>Pintura manual</dd>
-              </div>
-              <div>
-                <dt>Alturas</dt>
-                <dd>15, 20 e 30 cm</dd>
+                <dt>Produção</dt>
+                <dd>Impressão colorida</dd>
               </div>
             </dl>
+          </div>
 
-            <form class="product-order" data-product-form>
-              <fieldset>
-                <legend>Escolha o tamanho</legend>
-                <div class="size-options">
-                  <label>
-                    <input type="radio" name="size" value="15" data-price="99" />
-                    <span class="size-card"><strong>15 cm</strong><small>R$ 99,00</small></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="size" value="20" data-price="149" />
-                    <span class="size-card"><strong>20 cm</strong><small>R$ 149,00</small></span>
-                  </label>
-                  <label>
-                    <input type="radio" name="size" value="30" data-price="200" checked />
-                    <span class="size-card"><strong>30 cm</strong><small>R$ 200,00</small></span>
-                  </label>
-                </div>
-              </fieldset>
+          <p class="product-description">
+            Kratos é o lendário guerreiro espartano e protagonista da franquia God of War. Nesta peça, o personagem ganha forma em impressão 3D colorida, sem pintura, preservando os contrastes e detalhes que marcam sua jornada pela mitologia nórdica.
+          </p>
 
-              <div class="order-summary">
-                <div class="current-price" aria-live="polite">
-                  <span>A partir de</span>
-                  <strong data-current-price>R$ 200,00</strong>
-                  <small data-current-size>Peça de 30 cm</small>
-                </div>
-                <a
-                  class="button order-button"
-                  data-order-link
-                  href="mailto:contato@redlabs3d.com?subject=Encomenda%20Kratos%20-%2030%20cm&amp;body=Olá%2C%20gostaria%20de%20encomendar%20o%20Kratos%20de%2030%20cm%20por%20R%24%20200%2C00."
-                >
-                  Solicitar esta peça
-                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 9 0m-4-4 4 4-4 4" /></svg>
-                </a>
+          <form class="product-order" data-product-form>
+            <fieldset>
+              <legend>Opções disponíveis</legend>
+              <div class="size-options">
+                <label>
+                  <input type="radio" name="size" value="15" data-price="99" />
+                  <span class="size-card"><strong>15 cm</strong><small>R$ 99,00</small></span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="20" data-price="149" />
+                  <span class="size-card"><strong>20 cm</strong><small>R$ 149,00</small></span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="30" data-price="200" checked />
+                  <span class="size-card"><strong>30 cm</strong><small>R$ 200,00</small></span>
+                </label>
               </div>
-              <p class="order-note"><span></span> Produção sob encomenda</p>
-            </form>
-          </div>
+            </fieldset>
 
-          <div class="product-visual" aria-label="Imagem oficial da peça Kratos">
-            <span class="product-code">RL / 001</span>
-            <span class="visual-word" aria-hidden="true">GHOST</span>
-            <div class="measure measure-top" aria-hidden="true"><span>30 cm</span></div>
-            <div class="measure measure-bottom" aria-hidden="true"><span>15 cm</span></div>
-            <div class="red-orbit" aria-hidden="true"></div>
-            <img
-              src="assets/images/kratos-product.webp"
-              alt="Peça colecionável Kratos impressa em 3D e pintada à mão"
-              width="1600"
-              height="1600"
-              fetchpriority="high"
-            />
-            <p class="visual-caption"><span>Foto oficial</span> RedLabs Studio 3D</p>
-          </div>
-        </div>
+            <div class="order-summary">
+              <div class="current-price" aria-live="polite">
+                <span>Valor selecionado</span>
+                <strong data-current-price>R$ 200,00</strong>
+                <small data-current-size>Peça de 30 cm</small>
+              </div>
+              <a
+                class="button order-button"
+                data-order-link
+                href="mailto:contato@redlabs3d.com?subject=Encomenda%20Kratos%20-%2030%20cm&amp;body=Olá%2C%20gostaria%20de%20encomendar%20o%20Kratos%20de%2030%20cm%20por%20R%24%20200%2C00."
+              >
+                Solicitar esta peça
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 9 0m-4-4 4 4-4 4" /></svg>
+              </a>
+            </div>
+            <p class="order-note"><span></span> Produção sob encomenda</p>
+          </form>
+        </article>
       </section>
 
       <section id="detalhes" class="section product-details" aria-labelledby="details-title">
@@ -161,13 +156,13 @@
             </article>
             <article class="detail-card reveal">
               <span>02</span>
-              <h3>Impressão precisa</h3>
-              <p>Produção em PLA com atenção aos volumes, texturas da armadura e expressão do personagem.</p>
+              <h3>Impressão colorida</h3>
+              <p>Produção em PLA colorido, sem pintura, com atenção aos volumes, texturas e expressão do personagem.</p>
             </article>
             <article class="detail-card reveal">
               <span>03</span>
-              <h3>Finalização manual</h3>
-              <p>Pintura e acabamento feitos peça a peça para realçar os contrastes, marcas e acessórios.</p>
+              <h3>Pronta para exibir</h3>
+              <p>As cores fazem parte da própria impressão, e cada peça passa por revisão antes do envio.</p>
             </article>
           </div>
         </div>
@@ -188,11 +183,11 @@
             </li>
             <li class="reveal">
               <span>02</span>
-              <div><h3>Impressão</h3><p>O modelo é preparado e produzido na escala escolhida.</p></div>
+              <div><h3>Impressão colorida</h3><p>O modelo é preparado e produzido em PLA colorido na escala escolhida.</p></div>
             </li>
             <li class="reveal">
               <span>03</span>
-              <div><h3>Acabamento</h3><p>A peça recebe montagem, refinamento e pintura manual.</p></div>
+              <div><h3>Montagem</h3><p>A peça recebe montagem, limpeza e refinamento, sem etapa de pintura.</p></div>
             </li>
             <li class="reveal">
               <span>04</span>
