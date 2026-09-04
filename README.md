@@ -1,6 +1,6 @@
 # RedLabs Studio 3D
 
-Site institucional estático da RedLabs, organizado para manutenção simples e publicação direta.
+Catálogo estático da RedLabs, organizado para manutenção simples e publicação direta.
 
 ## Estrutura
 
@@ -22,5 +22,6 @@ Abra `index.html` diretamente no navegador ou inicie um servidor estático:
 python -m http.server 8000
 ```
 
-Antes de publicar, confirme o e-mail do botão de orçamento em `index.html` ou substitua-o pelo canal oficial da RedLabs.
+Os tamanhos, preços e dados do produto ficam no `index.html`. Antes de publicar novas alterações, confirme também o e-mail do botão de encomenda ou substitua-o pelo canal oficial da RedLabs.
+
 
