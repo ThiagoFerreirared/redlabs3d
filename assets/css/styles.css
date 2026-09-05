@@ -1503,3 +1503,37 @@ input {
   }
 }
 
+
+/* Dragon Ball label stays above the figure without covering its hair. */
+.catalog-product-image-goku img {
+  padding-top: 52px;
+}
+.dragon-ball-bubble {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  right: 12px;
+  padding: 7px 11px;
+  border: 2px solid #111;
+  border-radius: 16px 16px 16px 4px;
+  background: #ffd43b;
+  color: #111;
+  font-family: var(--display);
+  font-size: 0.625rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.035em;
+  box-shadow: 2px 3px 0 #111;
+}
+.dragon-ball-bubble::after {
+  position: absolute;
+  bottom: -6px;
+  left: 13px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  background: #ffd43b;
+  transform: rotate(45deg);
+  content: "";
+}
