@@ -512,18 +512,18 @@ input {
   font-size: 0.75rem;
 }
 
-.catalog-product-price {
+.catalog-product-measure {
   flex: none;
   text-align: right;
 }
 
-.catalog-product-price span {
+.catalog-product-measure span {
   display: block;
   color: var(--muted);
   font-size: 0.625rem;
 }
 
-.catalog-product-price strong {
+.catalog-product-measure strong {
   color: #fff;
   font-family: var(--display);
   font-size: 0.9375rem;
@@ -806,110 +806,37 @@ input {
   margin-top: 26px;
 }
 
-.product-order fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
+.order-summary {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.product-order legend {
-  margin-bottom: 12px;
-  color: var(--muted-strong);
-  font-size: 0.8125rem;
+.inquiry-copy > span {
+  color: var(--accent);
+  font-size: 0.6875rem;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.size-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.size-options label {
-  min-width: 0;
-  cursor: pointer;
-}
-
-.size-options input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-.size-card {
-  display: grid;
-  min-height: 70px;
-  place-content: center;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-small);
-  background: rgba(255, 255, 255, 0.025);
-  text-align: center;
-  transition: border-color var(--transition), background var(--transition), transform var(--transition);
-}
-
-.size-card strong {
+.inquiry-copy h2 {
+  max-width: 540px;
+  margin: 8px 0 0;
   font-family: var(--display);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.inquiry-copy p {
+  max-width: 620px;
+  margin: 10px 0 0;
+  color: var(--muted);
   font-size: 0.9375rem;
 }
 
-.size-card small {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.size-options label:hover .size-card {
-  border-color: var(--line-strong);
-  transform: translateY(-2px);
-}
-
-.size-options input:checked + .size-card {
-  border-color: var(--accent);
-  background: rgba(255, 49, 40, 0.11);
-  box-shadow: inset 0 0 0 1px rgba(255, 49, 40, 0.2);
-}
-
-.size-options input:focus-visible + .size-card {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-.order-summary {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 18px;
-}
-
-.current-price {
-  display: grid;
-  min-width: 145px;
-}
-
-.current-price > span {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.current-price strong {
-  color: #fff;
-  font-family: var(--display);
-  font-size: 1.7rem;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-}
-
-.current-price small {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
 .order-button {
-  flex: 1;
+  min-width: 230px;
 }
 
 .order-note {
@@ -1445,32 +1372,12 @@ input {
     text-align: left;
   }
 
-  .size-options {
-    gap: 7px;
-  }
-
-  .size-card {
-    min-height: 68px;
-    padding-inline: 5px;
-  }
-
   .order-summary {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    justify-content: stretch;
   }
 
-  .current-price {
-    grid-template-columns: auto auto;
-    align-items: end;
-    gap: 0 10px;
-  }
-
-  .current-price > span {
-    grid-column: 1 / -1;
-  }
-
-  .order-note {
-    grid-column: auto;
+  .order-button {
+    width: 100%;
   }
 
   .contact-card::after {
@@ -1537,3 +1444,4 @@ input {
   transform: rotate(45deg);
   content: "";
 }
+
