@@ -1445,3 +1445,40 @@ input {
   content: "";
 }
 
+/* Diorama badge and photographic treatment for the supplied catalog image. */
+.catalog-product-image-spider {
+  background: #5f5f5f;
+}
+
+.catalog-product-image-spider img {
+  padding: 0;
+  object-position: center 64%;
+  filter: none;
+}
+
+.diorama-bubble {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  right: 12px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 0.625rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+.product-figure-photo img {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  filter: drop-shadow(0 26px 28px rgba(0, 0, 0, 0.42));
+}
+
+
