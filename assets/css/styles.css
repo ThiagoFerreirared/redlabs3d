@@ -1447,13 +1447,15 @@ input {
 
 /* Diorama badge and photographic treatment for the supplied catalog image. */
 .catalog-product-image-spider {
-  background: #5f5f5f;
+  background:
+    radial-gradient(circle at 50% 58%, rgba(255, 49, 40, 0.16), transparent 44%),
+    #0b0b0e;
 }
 
 .catalog-product-image-spider img {
-  padding: 0;
-  object-position: center 64%;
-  filter: none;
+  padding: 12px 10px 0;
+  object-position: center bottom;
+  filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.52));
 }
 
 .diorama-bubble {
@@ -1475,10 +1477,8 @@ input {
 }
 
 .product-figure-photo img {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  filter: drop-shadow(0 26px 28px rgba(0, 0, 0, 0.42));
+  filter: drop-shadow(0 26px 28px rgba(0, 0, 0, 0.55));
 }
+
 
 
